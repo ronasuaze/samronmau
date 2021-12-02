@@ -18,4 +18,3 @@ catch(PDOException $e)
 {
     echo "connectie mislukt:" . $e->getMessage();
 }
-?>

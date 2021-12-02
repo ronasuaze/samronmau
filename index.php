@@ -1,4 +1,4 @@
-<?php include 'functions.php'; ?>
+
     <head>
         <meta charset="UTF-8">
         <title>  </title>
