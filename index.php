@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'functions.php'; ?>
     <head>
         <meta charset="UTF-8">
         <title>  </title>
@@ -23,4 +22,3 @@
             <li><a href="delete-auto.php">delete</a> </li>
         </ul>
     </body>
-</html>
