@@ -5,11 +5,25 @@
     Dit formulier wordt gebruikt om klantgegevens in te voeren.
 </p>
 <form action="create-klant.php" method="post">
-    klantID: <input type="text" name="klantIDvak">
-    klantnaam: <input type="text" name="klantnaamvak">
-    klantadres: <input type="text" name="klantadresvak">
-    klantpostcode: <input type="text" name="klantpostcodevak">
-    klantE-mail: <input type="text" name="klantE-mailsvak">
-    klanttelefoonnummer: <input type="text" name="klanttelefoonnummersvak">
+    <label>
+        naam:
+        <input type="text" name="klantnaamvak">
+    </label>
+    <label>
+        adres:
+        <input type="text" name="klantadresvak">
+    </label>
+    <label>
+        postcode:
+        <input type="text" name="klantpostcodevak">
+    </label>
+    <label>
+        E-mail:
+        <input type="text" name="klantE-mailsvak">
+    </label>
+    <label>
+        telefoonnummer:
+        <input type="text" name="klanttelefoonnummersvak">
+    </label>
     <input type="submit">
 </form>
