@@ -9,4 +9,4 @@ function SQLMetResult($db, $commando){
     return $result;
 }
 
-$db = new PDO("mysql:host=localhost;dbname=garage_ertan", "", "" );
+$db = new PDO("mysql:host=localhost;dbname=garage_ertan", "root", "root" );
