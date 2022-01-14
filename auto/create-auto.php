@@ -1,2 +1,2 @@
 <?php include 'functions.php';
-$test
+$test $hoimaurino
