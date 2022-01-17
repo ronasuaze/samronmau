@@ -32,6 +32,5 @@
 				}
 			echo "</table>";
 			echo "<a href='index.php'> terug naar het menu.</a>";
-		?>
 	</body>
 </html>
