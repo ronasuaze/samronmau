@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-update-klant2.php</title>
-        <link href="stylesheet.css">
+        <link rel="stylesheet" href="stylesheet.css">
 	</head>
 	<body>
 		<h1>Garage update klant 2</h1>

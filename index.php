@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>gar-menu.php</title>
-    <link href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 <h1>Garage menu</h1>

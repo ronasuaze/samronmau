@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-create-klant1.php</title>
-        <link href="stylesheet.css">
+        <link rel="stylesheet" href="stylesheet.css">
 	</head>
 	<body>
 		<h1>Garage create klant 1</h1>
