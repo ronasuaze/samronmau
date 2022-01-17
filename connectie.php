@@ -1,6 +1,6 @@
 <?php
     $servername = "localhost";
-    $dbname = "garage_ertan";
+    $dbname = "garage ertan";
     $username = "root";
     $password = "root";
 
