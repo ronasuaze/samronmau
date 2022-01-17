@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-read-auto.php</title>
+        <link href="stylesheet.css">
 	</head>
 	<body>
 		<h1>Garage read auto</h1>
