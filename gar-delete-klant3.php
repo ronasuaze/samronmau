@@ -30,7 +30,7 @@
 				echo "De gegevens zijn niet verwijderd.<br />";
 			}
 			
-			echo "<a href='gar-menu.php'>Terug naar het menu.</a>";
+			echo "<a href='index.php'>Terug naar het menu.</a>";
 		?>
 	</body>
 </html>

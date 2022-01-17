@@ -34,7 +34,7 @@
 				echo "</tr>";
 			}
 			echo "</table><br/>";
-			echo "<a href='gar-menu.php' terug naar het menu.</a>";
+			echo "<a href='index.php' terug naar het menu.</a>";
 		?>
 	</body>
 </html>
