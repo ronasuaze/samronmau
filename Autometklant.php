@@ -34,6 +34,7 @@ $result = mysqli_query($connect, $sql);
                         <td><?php echo $row["klantnaam"];?></td>
                         <td><?php echo $row["autokenteken"]; ?></td>
                         <td><?php echo $row["automerk"]; ?></td>
+                        <td><?php echo $row["autotype"]; ?></td>
                     </tr>
                     <?php
 
