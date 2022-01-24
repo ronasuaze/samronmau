@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-delete-auto3.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Garage delete auto 3</h1>
@@ -26,8 +26,10 @@
 			else {
 				echo "De gegevens zijn niet verwijderd.<br/>";
 			}
-			
-			echo "<a href='index.php'>Terug naar het menu.</a>";
+
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

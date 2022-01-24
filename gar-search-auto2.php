@@ -3,11 +3,26 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-search-auto2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<h1>Garage zoek op kenteken 2</h1>
-		<p>Op kenteken gegevens zoeken uit de tabel "auto" van de database "garage".</p>
+    <div class="container" style="width:500px;">
+        <h3 align="">Garage zoek op kenteken 2</h3><br />
+        <p>Op kenteken gegevens zoeken uit de tabel "auto" van de database "garage".</p>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th>Klantid</th>
+                    <th>Klantnaam</th>
+                    <th>Klantadres</th>
+                    <th>Klantpostcode</th>
+                    <th>Klantplaats</th>
+                </tr>
+
+
+
 		<?php
 			$autokenteken = $_POST["autokentekenvak"];
 			
@@ -19,12 +34,12 @@
 												automerk,
 												autotype,
 												autokmstand
-										from	auto
-										where	autokenteken = :autokenteken
+										from	auto 
+										where	autokenteken =  :autokenteken
 									");
 			$autos->execute(["autokenteken" => $autokenteken]);
 			
-			echo "<table>";
+
 			foreach($autos as $auto) {
 				echo "<tr>";
 					echo "<td>" . $auto["klantid"] . "</td>";
@@ -34,8 +49,11 @@
 					echo "<td>" . $auto["autokmstand"] . "</td>";
 				echo "</tr>";
 			}
-			echo "</table><br/>";
-			echo "<a href='index.php' terug naar het menu.</a>";
+
 		?>
+            </table>
+            <?php
+            include_once "Terugknop.php";
+            ?>
 	</body>
 </html>

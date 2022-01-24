@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-delete-auto2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            input[type=submit]{
+                margin-left: 3px;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Garage delete auto 2</h1>
@@ -44,5 +50,8 @@
 				echo "<input type='submit'>";
 			echo "</form>";
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

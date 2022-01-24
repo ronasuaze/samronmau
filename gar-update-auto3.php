@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-update-auto3.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Garage update auto 3</h1>
@@ -35,7 +35,9 @@
 			]);
 			
 			echo "De auto is gewijzigd.<br/>";
-			echo "<a href='index.php'> terug naar het menu.</a>";
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

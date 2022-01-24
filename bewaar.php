@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
+
     <meta charset="UTF-8">
     <title>gar-menu.php</title>
     <link rel="stylesheet" href="stylesheet.css">
@@ -24,5 +25,6 @@
     <li><a href="gar-update-auto1.php">   Update              </a></li>
     <li><a href="gar-delete-auto1.php">   Delete              </a></li>
 </ul>
+
 </body>
 </html>

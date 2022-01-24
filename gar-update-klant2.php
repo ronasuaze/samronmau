@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-update-klant2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+        body{
+        font-family: "Roboto", sans-serif;
+        margin-left: 30%;
+        margin-top: 15%;
+        }
+        </style>
 	</head>
 	<body>
 		<h1>Garage update klant 2</h1>
@@ -25,6 +32,10 @@
 										      where	  klantid = :klantid
 									");
 			$klanten->execute(["klantid" => $klantid]);
+
+        $count = $klanten->rowCount();
+        if ($count <=0 )
+        {echo "</br> klant bestaat niet !"  ;}
 			
 			echo "<form action='gar-update-klant3.php' method='post'>";
 				foreach($klanten as $klant) {
@@ -53,8 +64,13 @@
 					echo " value = '" .$klant["klantplaats"]. "' ";
 					echo " > <br />";
 				}
-				echo "<input type='submit'>";
-			echo "</form>";
-		?>
+        if ($count >0 ) {
+            echo "<input type='submit'>";
+        }
+        echo "</form>";
+        ?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

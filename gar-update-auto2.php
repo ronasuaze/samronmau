@@ -3,7 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-update-auto2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body{
+                margin-top: 10%;
+            }
+            input[type=submit]{
+                margin-left: 100px;
+            }
+        </style>
 	</head>
 	<body>
 		<h1>Garage update auto 2</h1>
@@ -23,6 +31,13 @@
 										where	autokenteken = :autokenteken
 									");
 			$autos->execute(["autokenteken" => $autokenteken]);
+echo "</br>";
+        $count = $autos->rowCount();
+        if ($count <=0 )
+        {echo " auto bestaat niet !"  ;}
+
+
+
 			
 			echo "<form action='gar-update-auto3.php' method='post'>";
 				foreach($autos as $auto) {
@@ -51,8 +66,13 @@
 					echo " value = '" .$auto["autokmstand"]. "' ";
 					echo " > <br/>";
 				}
-				echo "<input type='submit'>";
+        if ($count >0 ) {
+            echo "<input type='submit'>";
+        }
 			echo "</form>";
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

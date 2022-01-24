@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-create-auto2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+            body{
+                font-family: "Roboto", sans-serif;
+                margin-left: 40%;
+                margin-top: 15%;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Garage auto 2</h1>
@@ -28,7 +35,9 @@
 						]);
 						
 			echo "De auto is toegevoegd <br/>";
-			echo "<a href='index.php' terug naar het menu.</a>";
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

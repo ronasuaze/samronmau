@@ -3,7 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-delete-klant2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            input[type=submit]{
+                margin-left: 3px;
+            }
+        </style>
 	</head>
 	<body>
 		<h1>Garage delete klant 2</h1>
@@ -16,6 +21,7 @@
 			$klantid = $_POST["klantidvak"];
 			
 			require_once "connectie.php";
+
 			
 			$klanten = $conn->prepare("
 										select	klantid,
@@ -27,7 +33,7 @@
 										where	klantid = :klantid
 									");
 			$klanten->execute(["klantid" => $klantid]);
-			
+        echo "</br>";
 			echo "<table>";
 			foreach($klanten as $klant) {
 				echo "<tr>";
@@ -39,6 +45,7 @@
 				echo "</tr>";
 			}
 			echo "</table><br />";
+
 			
 			echo "<form action='gar-delete-klant3.php' method='post'>";
 				echo "<input type='hidden' name='klantidvak' value=$klantid>";
@@ -48,5 +55,8 @@
 				echo "<input type='submit'>";
 			echo "</form>";
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

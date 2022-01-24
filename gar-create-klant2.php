@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-create-klant2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+        body{
+        font-family: "Roboto", sans-serif;
+        margin-left: 40%;
+        margin-top: 15%;
+        }
+        </style>
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<h1>Garage klant 2</h1>
@@ -28,9 +35,12 @@
 							"klantpostcode"	=> $klantpostcode,
 							"klantplaats" 	=> $klantplaats
 						]);
-						
+				echo "<br/>";
 			echo "De klant is toegevoegd <br />";
-			echo "<a href='index.php' terug naar het menu.</a>";
+
 		?>
+        <?php
+        include_once "Terugknop.php";
+        ?>
 	</body>
 </html>

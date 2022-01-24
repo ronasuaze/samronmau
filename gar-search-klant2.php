@@ -3,11 +3,30 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gar-search-klant2.php</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            a{
+                text-decoration: none;
+                color: #0c93e4;
+            }
+        </style>
 	</head>
 	<body>
-		<h1>Garage zoek op klantID 2</h1>
-		<p>Op klantID gegevens zoeken uit de tabel "klanten" van de database "garage".</p>
+    <div class="container" style="width:500px;">
+        <h3 align="">Garage zoek op klantID 2</h3><br />
+        <p>Op klantID gegevens zoeken uit de tabel "klanten" van de database "garage".</p>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th>Klantid</th>
+                    <th>Klantnaam</th>
+                    <th>Klantadres</th>
+                    <th>Klantpostcode</th>
+                    <th>Klantplaats</th>
+                </tr>
+
 		<?php
 			$klantid = $_POST["klantidvak"];
 			
@@ -23,8 +42,7 @@
 										where	klantid = :klantid
 									");
 			$klanten->execute(["klantid" => $klantid]);
-			
-			echo "<table>";
+
 			foreach($klanten as $klant)
             {
 				echo "<tr>";
@@ -35,8 +53,11 @@
 					echo "<td>" . $klant["klantplaats"]  . "</td>";
 				echo "</tr>";
 			}
-			echo "</table><br />";
-			echo "<a href='index.php' terug naar het menu.</a>";
+
 		?>
+            </table>
+            <?php
+            include_once "Terugknop.php";
+            ?>
 	</body>
 </html>
