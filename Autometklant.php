@@ -21,6 +21,7 @@ $result = mysqli_query($connect, $sql);
                 <th>Klantnaam</th>
                 <th>Autokenteken</th>
                 <th>Automerk</th>
+                <th>Autotype</th>
             </tr>
             <?php
             if(mysqli_num_rows($result) > 0)
